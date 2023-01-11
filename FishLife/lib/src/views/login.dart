@@ -9,16 +9,20 @@ class LoginScreen extends StatelessWidget {
   Widget build(context) {
     final bloc = Provider.of(context);
 
-    return Container(
-      margin: const EdgeInsets.all(20.0),
-      child: Column(
-        children: [
-          Container(margin: const EdgeInsets.only(top:25.0)),
-          email(bloc),
-          password(bloc),
-          Container(margin: const EdgeInsets.only(top:25.0)),
-          loginButton(bloc),
-        ],
+    return Scaffold(
+      body: SafeArea(
+        child: Container(
+          margin: const EdgeInsets.all(20.0),
+          child: Column(
+            children: [
+              Container(margin: const EdgeInsets.only(top:25.0)),
+              email(bloc),
+              password(bloc),
+              Container(margin: const EdgeInsets.only(top:25.0)),
+              loginButton(bloc),
+            ],
+          ),
+        ),
       ),
     );
   }

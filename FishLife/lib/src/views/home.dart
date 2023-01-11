@@ -9,15 +9,17 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Home'),
       ),
-      body: Center(
-        child: ElevatedButton(
-          style: ElevatedButton.styleFrom(
-            foregroundColor: Colors.white,
-            backgroundColor: Colors.blue,
-            minimumSize: const Size(200, 40),
+      body: SafeArea(
+        child: Center(
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              foregroundColor: Colors.white,
+              backgroundColor: Colors.blue,
+              minimumSize: const Size(200, 40),
+            ),
+            onPressed: (){ },
+            child: const Text('Logout'),
           ),
-          onPressed: (){ },
-          child: const Text('Logout'),
         ),
       ),
     );
